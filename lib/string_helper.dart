@@ -6,7 +6,7 @@
 /// https://docs.python.org/3.6/library/string.html
 library string_helper;
 
-import 'package:quiver/strings.dart' as quiver;
+export 'package:quiver/strings.dart' show isWhitespace, isDigit;
 
 final Iterable<int> asciiLowercaseLetters = 'abcdefghijklmnopqrstuvwxyz'.runes;
 final Iterable<int> asciiUppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.runes;
@@ -19,5 +19,3 @@ bool isAsciiLowercaseLetter(int rune) => asciiLowercaseLetters.contains(rune);
 bool isAsciiUppercaseLetter(int rune) => asciiUppercaseLetters.contains(rune);
 bool isAsciiLetter(int rune) => asciiLetters.contains(rune);
 bool isPunctuation(int rune) => punctuations.contains(rune);
-bool isWhitespace(int rune) => quiver.isWhitespace(rune);
-bool isDigit(int rune) => quiver.isDigit(rune);
